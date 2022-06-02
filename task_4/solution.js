@@ -2,9 +2,10 @@
 
 function parseProducts(json) {
     // Аргументом функции является JSON
-    let data = {"json" : JSON.parse(json)};
+    let json = {products : JSON.parse(json)};
+    let data = json
     let products = data.products;
-    return parseProducts(products);
+    return parseProducts();
 
     // Преобразуйте строку json, переданную как аргумент функции,
     // в объект с помощью функции JSON.parse(json)
